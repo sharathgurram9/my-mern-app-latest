@@ -1,0 +1,16 @@
+{
+  "name": "My MERN App",
+  "forwardPorts": [3000, 5000],
+  "portsAttributes": {
+    "3000": {
+      "label": "Frontend",
+      "onAutoForward": "openPreview",
+      "visibility": "public"
+    },
+    "5000": {
+      "label": "Backend",
+      "onAutoForward": "notify",
+      "visibility": "public"
+    }
+  }
+}
