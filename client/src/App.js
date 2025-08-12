@@ -1,9 +1,12 @@
 import React, { useEffect, useState } from 'react';
+import DisplayMessage from './DisplayMessage.tsx';
+import Button from './components/Button.jsx';
+import ToggleComponent from './components/ToggleComponent.jsx';
 
 function App() {
   const [message, setMessage] = useState('Loading...');
 
-fetch('https://symmetrical-memory-69rj97qqxqwwcrv5p-5000.app.github.dev/api/message')
+fetch('https://humble-succotash-x59j5q77g4w6cpxvg-5000.app.github.dev/api/message')
   .then((res) => res.json())
   .then((data) => setMessage(data.message))
   .catch((err) => {
@@ -16,9 +19,20 @@ fetch('https://symmetrical-memory-69rj97qqxqwwcrv5p-5000.app.github.dev/api/mess
 
 
   return (
-    <div>
-      <h1>Message from Backend:</h1>
-      <p>{message}</p>
+     <div className="space-x-2 p-4">
+      {/* <Button label="Primary" onClick={() => alert("Primary clicked")} />
+      <Button
+        label="Secondary"
+        variant="secondary"
+        onClick={() => alert("Secondary clicked")}
+      />
+      <Button
+        label="Delete"
+        variant="danger"
+        onClick={() => alert("Danger clicked")}
+      />
+      <Button label="Disabled" disabled /> */}
+      <ToggleComponent/>
     </div>
   );
 }

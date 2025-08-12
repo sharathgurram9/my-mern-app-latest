@@ -4,14 +4,18 @@ const cors = require('cors');
 
 require('dotenv').config();
 
+const userRoutes = require('./routes/userRoutes');
+
+
 const app= express()
 app.use(cors({
-  origin: 'https://symmetrical-memory-69rj97qqxqwwcrv5p-3000.app.github.dev',
+  origin: function (origin, callback) {
+    callback(null, origin); // Echo back the requesting origin
+  },
   credentials: true
 }));
 const PORT = process.env.PORT || 5000;
 
-const MONGO_URI = process.env.MONGO_URI;
 
 
 
