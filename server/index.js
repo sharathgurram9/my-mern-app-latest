@@ -7,7 +7,10 @@ require('dotenv').config();
 const userRoutes = require('./routes/userRoutes');
 
 
+
 const app= express()
+app.use('/api/users', userRoutes);
+
 app.use(cors({
   origin: function (origin, callback) {
     callback(null, origin); // Echo back the requesting origin
