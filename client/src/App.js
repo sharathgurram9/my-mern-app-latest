@@ -3,6 +3,7 @@ import DisplayMessage from './DisplayMessage.tsx';
 import Button from './components/Button.jsx';
 import ToggleComponent from './components/ToggleComponent.jsx';
 import DisplayData from './DisplayData.jsx';
+import Form from './components/Form.jsx';
 
 function App() {
 //   const [message, setMessage] = useState('Loading...');
@@ -33,7 +34,7 @@ function App() {
         onClick={() => alert("Danger clicked")}
       />
       <Button label="Disabled" disabled /> */}
-      <DisplayData/>
+      <Form/>
     </div>
   );
 }
